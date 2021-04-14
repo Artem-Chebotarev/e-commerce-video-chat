@@ -4,7 +4,9 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('/');
+export const SITE_URL = process.env.NODE_ENV === 'development' ? `http://localhost:5001/` : "/";
+
+const socket = io(SITE_URL);
 // const socket = io('http://localhost:5000');
 // const socket = io('https://wonderful-dubinsky-9ad7ae.netlify.app');
 
