@@ -3,9 +3,13 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"engines": {
+		"node": "14.x",
+		"yarn": "1.22.10"
+	  },
 	"scripts": {
 		"start": "npm i && node index.js",
-		"heroku-postbuild": "cd ./client && npm && npm run build"
+		"heroku-postbuild": "cd ./client && yarn && yarn run build"
 	},
 	"keywords": [],
 	"author": "",
